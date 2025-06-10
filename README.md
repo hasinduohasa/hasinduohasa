@@ -43,18 +43,3 @@
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=hasinduohasa&show_icons=true&locale=en" alt="hasinduohasa" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=hasinduohasa&" alt="hasinduohasa" /></p>
-
-name: Latest blog post workflow
-on: 
-    schedule:
-        - cron: '0 * * * *'
-jobs: 
-    update-readme-with-blog: 
-        name: Update this repo's README with latest blog posts
-        runs-on: ubuntu-latest
-        steps: 
-            - uses: actions/checkout@v2
-            - uses: gautamkrishnar/blog-post-workflow@master
-              with: 
-                max_post_count: "4"
-                feed_list: "https://medium.com/feed/@hasinduohasa"
